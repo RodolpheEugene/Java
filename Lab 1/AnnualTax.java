@@ -13,7 +13,7 @@ public class AnnualTax {
         // calculate tax
         if (income <= 50000) {
             taxRate = 0;
-            taxAmount = 0;
+            taxAmount = 0.0;
         } else if (income <= 100000) {
             taxRate = 7;
             taxAmount = income * taxRate;
@@ -32,7 +32,7 @@ public class AnnualTax {
         } else {
             // Output results
             taxAmount /= 100;
-            System.out.println("Your tax amount is: " + taxAmount);
+            System.out.println("Your tax amount is: " + String.format("%.2f", taxAmount));
             System.out.println("Your tax rate is: " + String.format("%.2f" , taxRate) + " %");
         }
     }
