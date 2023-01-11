@@ -16,7 +16,8 @@ public class divisible {
         boolean divisibleByBoth = (a%b==0) && (a%c==0);
         boolean divisibleByEither = (a%b==0) || (a%c==0);
         boolean divisibleByEitherButNotBoth = (a%b==0) ^ (a%c==0);
-
+        
+        // Output
         System.out.println("Is " + a + " divisible by " + b + " and " + c + "? " + divisibleByBoth);
         System.out.println("Is " + a + " divisible by " + b + " or " + c + "? " + divisibleByEither);
         System.out.println("Is " + a + " divisible by " + b + " or " + c + ", but not both? " + divisibleByEitherButNotBoth);
