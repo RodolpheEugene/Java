@@ -23,8 +23,8 @@ public class Panda {
 
     //methods
     public void toPrint(){
-        System.out.println("weight: " + String.format("%.2f" , weight));
-        System.out.println("age: " + String.format("%.2f" , age));
+        System.out.printf("weight: " + String.format("%.2f" , weight) + "\n");
+        System.out.printf("age: " + String.format("%.2f" , age) + "\n");
         System.out.println("number of legs: " + num_leg);
     }
 
