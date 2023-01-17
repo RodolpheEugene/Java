@@ -16,7 +16,7 @@ public class PrimeSum {
         // Call bePrime() in the loop body, preferably using an if statement
 
         int sum = 0;
-        for (int i = 2; i < m; i++) {
+        for (int i = 2; i <= m; i++) {
             if (bePrime(i)) {
                 sum += i;
             }
