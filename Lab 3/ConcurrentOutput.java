@@ -73,7 +73,7 @@ class PrintNum implements Runnable {
     @Override
     public void run() {
         for (int i = 1; i <= lastNum; i++) synchronized(outputArea) {
-            outputArea.appendText(i + " ");
+            outputArea.appendText(" " + i);
         }
     }
 }
