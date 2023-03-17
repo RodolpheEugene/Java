@@ -13,6 +13,7 @@ public class BMIServer extends Application {
     private TextArea text = new TextArea();
 
     private int clientNo = 0;
+    String host = "localhost";
 
     @Override
     public void start(Stage primaryStage){
@@ -34,7 +35,7 @@ public class BMIServer extends Application {
                   text.appendText("Starting thread for client at " + new Date() + '\n');
       
                   InetAddress inetAddress = socket.getInetAddress();
-                  text.appendText("Client " + clientNo + "'s host name is " + inetAddress.getHostName() + "\n");
+                  text.appendText("Client " + clientNo + "'s host name is "+ host + "\n");
                   text.appendText("Client " + clientNo + "'s IP Address is " + inetAddress.getHostAddress() + "\n");
                 });
                 
