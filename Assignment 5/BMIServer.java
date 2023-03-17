@@ -12,6 +12,8 @@ import javafx.stage.Stage;
 public class BMIServer extends Application {
     private TextArea text = new TextArea();
 
+    private int clientNo = 0;
+
     @Override
     public void start(Stage primaryStage){
         Scene scene = new Scene(new ScrollPane(text), 450, 200);
@@ -26,14 +28,14 @@ public class BMIServer extends Application {
           
               while (true) {
                 Socket socket = serverSocket.accept();
-          
-                
+                clientNo++;
+
                 Platform.runLater( () -> {
                   text.appendText("Starting thread for client at " + new Date() + '\n');
       
                   InetAddress inetAddress = socket.getInetAddress();
-                  text.appendText("Client's host name is " + inetAddress.getHostName() + "\n");
-                  text.appendText("Client's IP Address is " + inetAddress.getHostAddress() + "\n");
+                  text.appendText("Client " + clientNo + "'s host name is " + inetAddress.getHostName() + "\n");
+                  text.appendText("Client " + clientNo + "'s IP Address is " + inetAddress.getHostAddress() + "\n");
                 });
                 
                 new Thread(new HandleAClient(socket)).start();
