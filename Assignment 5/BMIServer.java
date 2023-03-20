@@ -1,4 +1,3 @@
-
 import java.io.*;
 import java.net.*;
 import java.util.Date;
@@ -11,7 +10,6 @@ import javafx.stage.Stage;
 
 public class BMIServer extends Application {
     private TextArea text = new TextArea();
-
     private int clientNo = 0;
     String host = "localhost";
 
@@ -66,8 +64,10 @@ public class BMIServer extends Application {
 
                 BMI bmi = new BMI(Weight, Height); // create BMI object
                      
-                outputToClient.writeDouble(Weight); // Output to server for Weight
-                outputToClient.writeDouble(Height); // Output to server for Height
+                // output back to the client
+                outputToClient.writeDouble(bmi.getBMI());
+                outputToClient.writeUTF(bmi.getStatus());
+                
 
                 Platform.runLater(() -> {
                   text.appendText("Weight: " + Weight + '\n');
