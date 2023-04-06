@@ -132,8 +132,6 @@ public class StaffDatabase extends Application {
         
                 // Check if any rows were affected
                 if (insertedValue > 0) {
-                    // Clear the fields and update the status label
-                    clearFields();
                     statusLabel.setText("Record Inserted"); // update status label
                 } else {
                     statusLabel.setText("Insert Failed"); // update status label if Insert is unsuccessful
