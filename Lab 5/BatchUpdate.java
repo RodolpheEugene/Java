@@ -32,7 +32,6 @@ public class BatchUpdate extends Application{
     Button btConnectToDatabase = new Button("Connect to Database");
     Button btBatchUpdate = new Button("Batch Update");
     Button btNonBatchUpdate = new Button("Non Batch-Update");
- ;
 
     // Add Batch Update and Non Batch Update buttons at the bottom of the application
     buttonBox1.getChildren().addAll(btBatchUpdate, btNonBatchUpdate);
